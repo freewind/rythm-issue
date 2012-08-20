@@ -1,0 +1,10 @@
+@args List<Article> articles, Article single
+
+<p>共@articles.size()条数据</p>
+@for(Article article: articles) {
+<p>id: [@article.category.id] | name: [@article.category.name]</p>
+}
+
+<hr>
+single:
+<p>id: [@single.category.id] | name: [@single.category.name]</p>

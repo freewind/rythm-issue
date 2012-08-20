@@ -1,0 +1,18 @@
+# Application dependencies
+
+require:
+    - play
+    - com.gelinsoft -> rythm 1.0.0-20120820
+    - ebean_wind -> ebean_wind 0.1
+
+repositories:
+    - gelinsoft:
+        type: http
+        artifact: "http://gelinsoft.com/play/repo/[module]-[revision].zip"
+        contains:
+            - com.gelinsoft -> *
+    - local:
+        type: local
+        artifact: ${application.path}/mymodules/[module]-[revision]
+        contains:
+            - ebean_wind
